@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "legalEntityId": {
+              "type": "string"
+            },
+            "legalEntityName": {
+              "type": "string"
+            },
+            "accreditationNumber": {
+              "type": "string"
+            },
+            "industry": {
+              "type": "string"
+            },
+            "logoUri": {
+              "type": "string"
+            },
+            "dataRecipientBrands": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "dataRecipientBrandId": {
+                      "type": "string"
+                    },
+                    "brandName": {
+                      "type": "string"
+                    },
+                    "logoUri": {
+                      "type": "string"
+                    },
+                    "softwareProducts": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "object",
+                          "properties": {
+                            "softwareProductId": {
+                              "type": "string"
+                            },
+                            "softwareProductName": {
+                              "type": "string"
+                            },
+                            "softwareProductDescription": {
+                              "type": "string"
+                            },
+                            "logoUri": {
+                              "type": "string"
+                            },
+                            "status": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "softwareProductId",
+                            "softwareProductName",
+                            "logoUri",
+                            "status"
+                          ]
+                        }
+                      ]
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "dataRecipientBrandId",
+                    "brandName",
+                    "logoUri",
+                    "status"
+                  ]
+                }
+              ]
+            },
+            "status": {
+              "type": "string"
+            },
+            "lastUpdated": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "legalEntityId",
+            "legalEntityName",
+            "accreditationNumber",
+            "industry",
+            "logoUri",
+            "status",
+            "lastUpdated"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

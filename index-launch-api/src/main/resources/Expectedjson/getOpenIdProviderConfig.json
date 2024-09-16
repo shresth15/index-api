@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "issuer": {
+      "type": "string"
+    },
+    "jwks_uri": {
+      "type": "string"
+    },
+    "token_endpoint": {
+      "type": "string"
+    },
+    "claims_supported": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "id_token_signing_alg_values_supported": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "subject_types_supported": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "code_challenge_methods_supported": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "scopes_supported": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "response_types_supported": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "grant_types_supported": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "token_endpoint_auth_methods_supported": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "tls_client_certificate_bound_access_tokens": {
+      "type": "boolean"
+    },
+    "request_object_signing_alg_values_supported": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    }
+  },
+  "required": [
+    "issuer",
+    "jwks_uri",
+    "token_endpoint",
+    "claims_supported",
+    "id_token_signing_alg_values_supported",
+    "subject_types_supported",
+    "code_challenge_methods_supported",
+    "scopes_supported",
+    "response_types_supported",
+    "grant_types_supported",
+    "token_endpoint_auth_methods_supported",
+    "tls_client_certificate_bound_access_tokens",
+    "request_object_signing_alg_values_supported"
+  ]
+}

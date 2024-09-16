@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "softwareProducts": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "softwareProductId": {
+              "type": "string"
+            },
+            "softwareProductStatus": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "softwareProductId",
+            "softwareProductStatus"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "softwareProducts"
+  ]
+}

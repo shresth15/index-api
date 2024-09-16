@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "customerUType": {
+          "type": "string"
+        },
+        "person": {
+          "type": "object",
+          "properties": {
+            "lastUpdateTime": {
+              "type": "string"
+            },
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "middleNames": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "prefix": {
+              "type": "string"
+            },
+            "suffix": {
+              "type": "string"
+            },
+            "occupationCode": {
+              "type": "string"
+            },
+            "occupationCodeVersion": {
+              "type": "string"
+            }
+          }
+        },
+        "organisation": {
+          "type": "object",
+          "properties": {
+            "lastUpdateTime": {
+              "type": "string"
+            },
+            "agentFirstName": {
+              "type": "string"
+            },
+            "agentLastName": {
+              "type": "string"
+            },
+            "agentRole": {
+              "type": "string"
+            },
+            "businessName": {
+              "type": "string"
+            },
+            "legalName": {
+              "type": "string"
+            },
+            "shortName": {
+              "type": "string"
+            },
+            "abn": {
+              "type": "string"
+            },
+            "acn": {
+              "type": "string"
+            },
+            "isACNCRegistered": {
+              "type": "boolean"
+            },
+            "industryCode": {
+              "type": "string"
+            },
+            "industryCodeVersion": {
+              "type": "string"
+            },
+            "organisationType": {
+              "type": "string"
+            },
+            "registeredCountry": {
+              "type": "string"
+            },
+            "establishmentDate": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+        "customerUType"
+      ]
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "self"
+      ]
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "data",
+    "links"
+  ]
+}

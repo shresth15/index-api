@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "accountId": {
+          "type": "string"
+        },
+        "currentBalance": {
+          "type": "string"
+        },
+        "availableBalance": {
+          "type": "string"
+        },
+        "creditLimit": {
+          "type": "string"
+        },
+        "amortisedLimit": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "purses": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "amount": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "string"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "accountId",
+        "currentBalance",
+        "availableBalance"
+      ]
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string"
+        }
+      }
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "data",
+    "links",
+    "meta"
+  ]
+}

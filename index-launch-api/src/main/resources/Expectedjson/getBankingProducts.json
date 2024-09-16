@@ -1,0 +1,148 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "products": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "productId": {
+                  "type": "string"
+                },
+                "effectiveFrom": {
+                  "type": "string"
+                },
+                "effectiveTo": {
+                  "type": "string"
+                },
+                "lastUpdated": {
+                  "type": "string"
+                },
+                "productCategory": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "brandName": {
+                  "type": "string"
+                },
+                "applicationUri": {
+                  "type": "string"
+                },
+                "isTailored": {
+                  "type": "boolean"
+                },
+                "additionalInformation": {
+                  "type": "object",
+                  "properties": {
+                    "overviewUri": {
+                      "type": "string"
+                    },
+                    "termsUri": {
+                      "type": "string"
+                    },
+                    "eligibilityUri": {
+                      "type": "string"
+                    },
+                    "feesAndPricingUri": {
+                      "type": "string"
+                    },
+                    "bundleUri": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "cardArt": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string"
+                        },
+                        "imageUri": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "imageUri"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "productId",
+                "lastUpdated",
+                "productCategory",
+                "name",
+                "description",
+                "brand",
+                "isTailored"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "products"
+      ]
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string"
+        },
+        "first": {
+          "type": "string"
+        },
+        "prev": {
+          "type": "string"
+        },
+        "next": {
+          "type": "string"
+        },
+        "last": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "self"
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "totalRecords": {
+          "type": "integer"
+        },
+        "totalPages": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "totalRecords",
+        "totalPages"
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "links",
+    "meta"
+  ]
+}

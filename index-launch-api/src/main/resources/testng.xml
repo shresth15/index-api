@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="1" name="testSuite" annotations="JDK">
+	<!-- parallel="tests"> -->
+
+	<!-- Generate Consents for Banking Api -->
+	<test thread-count="5" name="CreateBankingConsents">
+		<groups>
+			<run>
+				<include name="generateconsents" />
+			</run>
+		</groups>
+		<classes>
+			<class name="consent.GenerateConsents" />
+		</classes>
+	</test>
+
+	<!-- Banking test group execution -->
+	<test thread-count="5" name="Banking">
+		<parameter name="createtest" value="true" />
+		<groups>
+			<run>
+				<include name="banking" />
+			</run>
+		</groups>
+		<classes>
+			<class name="banking.GetAccountsTests" />
+			<class name="banking.GetAccountBalanceTests" />
+			<class name="banking.GetTransactionForAccountTests" />
+			<class name="banking.GetAccountsDirectDebitTests" />
+			<class name="banking.GetScheduledPaymentsTests" />
+			<class name="banking.GetPayeesTests" />
+			<class name="banking.BankingProductTests" />
+			<class name="banking.GetCustomerTests" />
+			<class name="banking.GetOutageTests" />
+		</classes>
+	</test> <!-- Test -->
+
+	<!-- Consent test group execution -->
+	<test thread-count="5" name="Consent">
+		<parameter name="createtest" value="false" />
+		<groups>
+			<run>
+				<include name="consent" />
+			</run>
+		</groups>
+		<classes>
+			<class name="consent.ConsentTests" />
+		</classes>
+	</test>
+
+	<!-- Register test group execution -->
+	<test thread-count="5" name="Register">
+		<parameter name="createtest" value="false" />
+		<groups>
+			<run>
+				<include name="register" />
+			</run>
+		</groups>
+		<classes>
+			<class name="register.RegistrationTests" />
+		</classes>
+	</test>
+
+	<!-- Security test group execution -->
+	<test thread-count="5" name="Security">
+		<parameter name="createtest" value="false" />
+		<groups>
+			<run>
+				<include name="security" />
+			</run>
+		</groups>
+		<classes>
+			<class name="securityProfiles.Security" />
+		</classes>
+	</test>
+
+	<!-- Admin test group execution -->
+	<test thread-count="5" name="Admin">
+		<parameter name="createtest" value="false" />
+		<groups>
+			<run>
+				<include name="admin" />
+			</run>
+		</groups>
+		<classes>
+			<class name="admin.AdminErrorCodeTests" />
+		</classes>
+	</test>
+
+	<!-- Manual test group execution -->
+	<test thread-count="5" name="Manual">
+		<parameter name="createtest" value="false" />
+		<groups>
+			<run>
+				<include name="manual" />
+			</run>
+		</groups>
+		<classes>
+			<class name="admin.AdminManualTest" />
+			<class name="register.RegistrationManualTests" />
+		</classes>
+	</test>
+	
+	<test thread-count="5" name="ManualConsent">
+		<parameter name="createtest" value="false" />
+		<groups>
+			<run>
+				<include name="consent-manual" />
+			</run>
+		</groups>
+		<classes>
+			<class name="consent.ConsentManualTests" />
+			<class name="consent.ConsentDRStatusTests" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->

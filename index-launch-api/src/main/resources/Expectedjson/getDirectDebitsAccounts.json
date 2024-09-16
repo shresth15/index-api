@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "directDebitAuthorisations": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "accountId": {
+                  "type": "string"
+                },
+                "authorisedEntity": {
+                  "type": "object",
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    },
+                    "financialInstitution": {
+                      "type": "string"
+                    },
+                    "abn": {
+                      "type": "string"
+                    },
+                    "acn": {
+                      "type": "string"
+                    },
+                    "arbn": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "lastDebitDateTime": {
+                  "type": "string"
+                },
+                "lastDebitAmount": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "accountId",
+                "authorisedEntity"
+                ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "directDebitAuthorisations"
+      ]
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string"
+        },
+        "first": {
+          "type": "string"
+        },
+        "prev": {
+          "type": "string"
+        },
+        "next": {
+          "type": "string"
+        },
+        "last": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "self"
+        ]
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "totalRecords": {
+          "type": "integer"
+        },
+        "totalPages": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "totalRecords",
+        "totalPages"
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "links",
+    "meta"
+  ]
+}

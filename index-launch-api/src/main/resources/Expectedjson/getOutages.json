@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "outages": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "outageTime": {
+                  "type": "string"
+                },
+                "duration": {
+                  "type": "string"
+                },
+                "isPartial": {
+                  "type": "boolean"
+                },
+                "explanation": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "outageTime",
+                "duration",
+                "explanation"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "outages"
+      ]
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "self"
+      ]
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "data",
+    "links",
+    "meta"
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "payeeId": {
+          "type": "string"
+        },
+        "nickname": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "creationDate": {
+          "type": "string"
+        },
+        "payeeUType": {
+          "type": "string"
+        },
+        "domestic": {
+          "type": "object",
+          "properties": {
+            "payeeAccountUType": {
+              "type": "string"
+            },
+            "account": {
+              "type": "object",
+              "properties": {
+                "accountName": {
+                  "type": "string"
+                },
+                "bsb": {
+                  "type": "string"
+                },
+                "accountNumber": {
+                  "type": "string"
+                }
+              }
+            },
+            "card": {
+              "type": "object",
+              "properties": {
+                "cardNumber": {
+                  "type": "string"
+                }
+              }
+            },
+            "payId": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "identifier": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type"
+              ]
+            }
+          }
+        },
+        "biller": {
+          "type": "object",
+          "properties": {
+            "billerCode": {
+              "type": "string"
+            },
+            "crn": {
+              "type": "string"
+            },
+            "billerName": {
+              "type": "string"
+            }
+          }
+        },
+        "international": {
+          "type": "object",
+          "properties": {
+            "beneficiaryDetails": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            },
+            "bankDetails": {
+              "type": "object",
+              "properties": {
+                "country": {
+                  "type": "string"
+                },
+                "accountNumber": {
+                  "type": "string"
+                },
+                "bankAddress": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "address": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "beneficiaryBankBIC": {
+                  "type": "string"
+                },
+                "fedWireNumber": {
+                  "type": "string"
+                },
+                "sortCode": {
+                  "type": "string"
+                },
+                "chipNumber": {
+                  "type": "string"
+                },
+                "routingNumber": {
+                  "type": "string"
+                },
+                "legalEntityIdentifier": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "payeeId",
+        "nickname",
+        "type",
+        "payeeUType"
+      ]
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "self"
+      ]
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "data",
+    "links",
+    "meta"
+  ]
+}

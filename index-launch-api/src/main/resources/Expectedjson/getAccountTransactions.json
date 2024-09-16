@@ -1,0 +1,130 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "transactions": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "accountId": {
+                  "type": "string"
+                },
+                "transactionId": {
+                  "type": "string"
+                },
+                "isDetailAvailable": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "postingDateTime": {
+                  "type": "string"
+                },
+                "valueDateTime": {
+                  "type": "string"
+                },
+                "executionDateTime": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "string"
+                },
+                "reference": {
+                  "type": "string"
+                },
+                "merchantName": {
+                  "type": "string"
+                },
+                "merchantCategoryCode": {
+                  "type": "string"
+                },
+                "billerCode": {
+                  "type": "string"
+                },
+                "billerName": {
+                  "type": "string"
+                },
+                "crn": {
+                  "type": "string"
+                },
+                "apcaNumber": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "accountId",
+                "isDetailAvailable",
+                "type",
+                "status",
+                "description",
+                "amount",
+                "reference"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "transactions"
+      ]
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string"
+        },
+        "first": {
+          "type": "string"
+        },
+        "prev": {
+          "type": "string"
+        },
+        "next": {
+          "type": "string"
+        },
+        "last": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "self"
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "totalRecords": {
+          "type": "integer"
+        },
+        "totalPages": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "totalRecords",
+        "totalPages"
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "links",
+    "meta"
+  ]
+}

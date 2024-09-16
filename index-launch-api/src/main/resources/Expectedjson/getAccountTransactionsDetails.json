@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "accountId": {
+          "type": "string"
+        },
+        "transactionId": {
+          "type": "string"
+        },
+        "isDetailAvailable": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "postingDateTime": {
+          "type": "string"
+        },
+        "valueDateTime": {
+          "type": "string"
+        },
+        "executionDateTime": {
+          "type": "string"
+        },
+        "amount": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "merchantName": {
+          "type": "string"
+        },
+        "merchantCategoryCode": {
+          "type": "string"
+        },
+        "billerCode": {
+          "type": "string"
+        },
+        "billerName": {
+          "type": "string"
+        },
+        "crn": {
+          "type": "string"
+        },
+        "apcaNumber": {
+          "type": "string"
+        },
+        "extendedData": {
+          "type": "object",
+          "properties": {
+            "payer": {
+              "type": "string"
+            },
+            "payee": {
+              "type": "string"
+            },
+            "extensionUType": {
+              "type": "string"
+            },
+            "x2p101Payload": {
+              "type": "object",
+              "properties": {
+                "extendedDescription": {
+                  "type": "string"
+                },
+                "endToEndId": {
+                  "type": "string"
+                },
+                "purposeCode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "extendedDescription"
+              ]
+            },
+            "service": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "service"
+          ]
+        }
+      },
+      "required": [
+        "accountId",
+        "isDetailAvailable",
+        "type",
+        "status",
+        "description",
+        "amount",
+        "reference",
+        "extendedData"
+      ]
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "self": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "self"
+      ]
+    },
+    "meta": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "data",
+    "links",
+    "meta"
+  ]
+}
